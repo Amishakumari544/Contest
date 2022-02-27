@@ -9,7 +9,8 @@ class Solution {
     }
 }
 
-
+//always use eqauls or index of for strings
+// it can be implemented by trie also
 public class Main {
     public static void main(String[] args) {
       String[] words = { "GEEKS", "FOR", "GEEKS" };
@@ -21,4 +22,18 @@ public class Main {
       System.out.println(c);
     }
   }
+
   
+  class Solution {
+    public int prefixCount(String[] words, String pref) {
+     int n=words.length;
+       int m=pref.length();
+       int cnt=0;
+       for(int i=0;i<n;i++){
+           if(words[i].length() >=m && words[i].substring(0,m).equals(pref)){
+               cnt++;
+           }
+       }
+       return cnt;
+       }
+       }
